@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Historique des appels - Wildix (Realtime)</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="animations.css">
+  <link rel="stylesheet" href="base.css">
+  <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+</head>
+<body>
+  <header style="display: flex; justify-content: space-between; align-items: center; padding: 10px;">
+    <h1>Historique des appels (Realtime)</h1>
+    <div>
+      <span id="connectedUser" style="margin-right: 10px;"></span>
+      <a href="/logout"><button>Déconnexion</button></a>
+    </div>
+  </header>
+
+  <table id="callTable">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>De</th>
+        <th>Vers</th>
+        <th>Durée (s)</th>
+        <th>Statut</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div id="formContainer" class="hidden">
+    <h2>Enrichir l'appel</h2>
+    <form id="enrichForm">
+      <input type="hidden" id="callId" />
+
+      <p>Date d’accueil : <span id="dateAuto"></span></p>
+      <p>Heure d’accueil : <span id="heureAuto"></span></p>
+
+      <label>Mode d’accueil :
+        <input type="text" id="modeAccueil" />
+      </label><br/>
+
+      <label>Objet :
+        <input type="text" id="objet" />
+      </label><br/>
+
+      <label>Commentaire sur l’objet :
+        <textarea id="commentaireObjet"></textarea>
+      </label><br/>
+
+      <label>Résultat :
+        <input type="text" id="resultat" />
+      </label><br/>
+
+      <label>Orientation :
+        <input type="text" id="orientation" />
+      </label><br/>
+
+      <label>Répondu par l'agent :
+        <input type="checkbox" id="reponduParAgent" onchange="toggleTraiteParOuTransmisA()" />
+      </label>
+
+      <label>Transmis à (si non répondu) :
+        <input type="text" id="traiteParOuTransmisA" />
+      </label><br/>
+
+      <label>Commentaire sur le résultat :
+        <textarea id="commentaireResultat"></textarea>
+      </label><br/>
+
+      <button type="submit">Enregistrer</button>
+      <button type="button" onclick="closeForm()">Annuler</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="particles.js"></script>
+
+  <script>
+    // Chargement du nom utilisateur via session (optionnel si injecté autrement)
+    fetch("/session-info")
+      .then(r => r.json())
+      .then(data => {
+        if (data.username) {
+          document.getElementById("connectedUser").textContent = "Connecté en tant que : " + data.username;
+        }
+      })
+      .catch(() => {
+        document.getElementById("connectedUser").textContent = "Utilisateur connecté";
+      });
+  </script>
+</body>
+</html>

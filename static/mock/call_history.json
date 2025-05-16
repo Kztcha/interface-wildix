@@ -1,0 +1,128 @@
+{
+  "type": "result",
+  "result": {
+    "total": 3,
+    "records": [
+      {
+        "id": "67",
+        "start": "2019-02-26 11:38:03",
+        "answer": "",
+        "end": "2019-02-26 11:38:03",
+        "src": "76",
+        "dst": "11",
+        "from_number": "61022",
+        "to_number": "76",
+        "from_name": "Fifth Tester",
+        "to_name": "76",
+        "billsec": "8",
+        "disposition": "ANSWERED",
+        "lastapp": "VoiceMail",
+        "userfield": "VM:/11/INBOX/msg1564999044-0489840875.mp3",
+        "faxdata": "",
+        "lastdata": "",
+        "cost": "",
+        "organization": "",
+        "channel": "SIP/61022-00000000",
+        "dstchannel": "",
+        "app": "0",
+        "callclass": "1",
+        "dest_type": "4",
+        "duration": "22",
+        "dcontext": "users",
+        "pbxid": "2211000011b3",
+        "type": "call",
+        "timezone": "+0200",
+        "attachments": {
+          "vm": { "url": "" },
+          "recordings": {
+            "url": "",
+            "time": "",
+            "source": "",
+            "destination": ""
+          },
+          "faxes": { "url": "" }
+        }
+      },
+      {
+        "id": "68",
+        "start": "2019-02-26 12:12:10",
+        "answer": "2019-02-26 12:12:15",
+        "end": "2019-02-26 12:15:00",
+        "src": "11",
+        "dst": "22",
+        "from_number": "60000",
+        "to_number": "11",
+        "from_name": "Agent Support",
+        "to_name": "Client X",
+        "billsec": "165",
+        "disposition": "ANSWERED",
+        "lastapp": "Dial",
+        "userfield": "",
+        "faxdata": "",
+        "lastdata": "SIP/60000",
+        "cost": "0.02",
+        "organization": "Support",
+        "channel": "SIP/60000-00000001",
+        "dstchannel": "SIP/11-00000002",
+        "app": "Dial",
+        "callclass": "1",
+        "dest_type": "2",
+        "duration": "170",
+        "dcontext": "users",
+        "pbxid": "2211000011b3",
+        "type": "call",
+        "timezone": "+0200",
+        "attachments": {
+          "vm": { "url": "" },
+          "recordings": {
+            "url": "https://example.com/recording.mp3",
+            "time": "2019-02-26 12:12:15",
+            "source": "60000",
+            "destination": "11"
+          },
+          "faxes": { "url": "" }
+        }
+      },
+      {
+        "id": "69",
+        "start": "2019-02-26 13:00:00",
+        "answer": "",
+        "end": "2019-02-26 13:00:20",
+        "src": "33",
+        "dst": "44",
+        "from_number": "62000",
+        "to_number": "44",
+        "from_name": "Client Y",
+        "to_name": "Hotline",
+        "billsec": "0",
+        "disposition": "NO ANSWER",
+        "lastapp": "Dial",
+        "userfield": "",
+        "faxdata": "",
+        "lastdata": "SIP/44",
+        "cost": "",
+        "organization": "Clients",
+        "channel": "SIP/62000-00000003",
+        "dstchannel": "SIP/44-00000004",
+        "app": "Dial",
+        "callclass": "1",
+        "dest_type": "2",
+        "duration": "20",
+        "dcontext": "users",
+        "pbxid": "2211000011b3",
+        "type": "call",
+        "timezone": "+0200",
+        "attachments": {
+          "vm": { "url": "" },
+          "recordings": {
+            "url": "",
+            "time": "",
+            "source": "",
+            "destination": ""
+          },
+          "faxes": { "url": "" }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+:root {
+  --main-color: rgba(171, 121, 220, 0.07);
+  --input-color: rgba(171, 121, 220, 0.368);
+  --box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+/* BAHAHAHA COUELUR CLAIR */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+  background: var(--main-color); /* couche translucide */
+  backdrop-filter: blur(10px); /* flou de fond */
+  -webkit-backdrop-filter: blur(10px); /* support Safari */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+
+th, td {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 12px;
+  text-align: center;
+  color: #e0e0e0;
+}
+
+.hidden {
+  display: none;
+}
+#formContainer {
+  margin-top: 30px;
+  padding: 20px;
+
+  border-collapse: collapse;
+
+  background: var(--main-color); /* couche translucide */
+  backdrop-filter: blur(10px); /* flou de fond */
+  -webkit-backdrop-filter: blur(10px); /* support Safari */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+
+textarea {
+  color: #e0e0e0; /* couleur du texte */
+  background-color: var(--input-color); /* fond sombre */
+  border: 1px solid #444;
+  padding: 10px;
+  border-radius: 6px;
+  resize: vertical; /* optionnel */
+}
+
+input:disabled, textarea:disabled {
+  background-color: rgba(255, 255, 255, 0.1); /* fond plus clair et neutre */
+  color: #999999;                             /* texte grisé */
+  border-color: #666666;                      /* bordure plus douce */
+  cursor: not-allowed;                        /* curseur interdit */
+}
+
+
+button {
+  color: #e0e0e0; /* couleur du texte */
+  background-color: var(--input-color); /* fond sombre */
+  border: 1px solid #444;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+input {
+  color: #e0e0e0; /* couleur du texte */
+  background-color: var(--input-color); /* fond sombre */
+  border: 1px solid #444;
+  padding: 10px;
+  border-radius: 6px;
+  resize: vertical; /* optionnel */
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+textarea {
+  width: 100%;
+  height: 60px;
+}

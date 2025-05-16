@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Connexion - Wildix</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="animations.css">
+</head>
+<body>
+  <h1>Connexion</h1>
+
+  <form action="/login" method="POST" id="loginForm">
+    <label for="username">Nom d'utilisateur :</label>
+    <input type="text" name="username" id="username" required><br/>
+
+    <label for="password">Mot de passe :</label>
+    <input type="password" name="password" id="password" required><br/>
+
+    <button type="submit">Se connecter</button>
+  </form>
+
+  <div id="loginError" style="color:red; display:none; margin-top: 10px;">
+    Identifiants invalides. Veuillez réessayer.
+  </div>
+
+  <script>
+    // Vérifie s’il y a ?error=1 dans l’URL
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("error") === "1") {
+      document.getElementById("loginError").style.display = "block";
+    }
+  </script>
+</body>
+</html>
